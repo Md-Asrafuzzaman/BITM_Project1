@@ -25,7 +25,7 @@ namespace Project
         private void saveButton_Click(object sender, EventArgs e)
         {
             //Checking Name UNIQUE
-            catagory.Name = nameTextBox.Text;
+            catagory.Category_Name = nameTextBox.Text;
             if (_catagoryManager.IsNameExists(catagory))
             {
                 MessageBox.Show(nameTextBox.Text + " Already Exists!");
@@ -33,12 +33,52 @@ namespace Project
             }
 
             //Checking Code UNIQUE
-            catagory.Code = codeTextBox.Text;
+            catagory.Category_Code = codeTextBox.Text;
             if (_catagoryManager.IsCodeExist(catagory))
             {
                 MessageBox.Show(codeTextBox.Text + " Already Exists!");
                 return;
             }
+
+            if (_catagoryManager.AddCustomerInfo(catagory))
+            {
+                MessageBox.Show("Category Save");
+                showDataGridView.DataSource = _catagoryManager.Display();
+            }
+            else
+            {
+                MessageBox.Show("Category Not Save");
+            }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forwardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CatagoryUI_Load(object sender, EventArgs e)
+        {
+            showDataGridView.DataSource = _catagoryManager.Display();
         }
     }
 }

@@ -14,6 +14,10 @@ namespace Project.BLL
     {
         CatagoryRepository _catagoryRepository = new CatagoryRepository();
         //Catagory catagory = new Catagory();
+        public bool AddCustomerInfo(Catagory category)
+        {
+            return _catagoryRepository.AddCustomerInfo(category);
+        }
         public bool IsNameExists(Catagory catagory)
         {
             return _catagoryRepository.IsNameExists(catagory);
@@ -22,6 +26,10 @@ namespace Project.BLL
         public bool IsCodeExist(Catagory catagory)
         {
             return _catagoryRepository.IsCodeExist(catagory);
+        }
+        public List<Catagory> Display()
+        {
+            return _catagoryRepository.Display();
         }
     }
 }

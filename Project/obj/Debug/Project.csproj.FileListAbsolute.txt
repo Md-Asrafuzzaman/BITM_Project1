@@ -1,0 +1,13 @@
+D:\BITM\Project\Project\bin\Debug\Project.exe.config
+D:\BITM\Project\Project\bin\Debug\Project.exe
+D:\BITM\Project\Project\bin\Debug\Project.pdb
+D:\BITM\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+D:\BITM\Project\Project\obj\Debug\Project.CatagoryUI.resources
+D:\BITM\Project\Project\obj\Debug\Project.CustomerUI.resources
+D:\BITM\Project\Project\obj\Debug\Project.ProductUI.resources
+D:\BITM\Project\Project\obj\Debug\Project.Properties.Resources.resources
+D:\BITM\Project\Project\obj\Debug\Project.SupplierUI.resources
+D:\BITM\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+D:\BITM\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\BITM\Project\Project\obj\Debug\Project.exe
+D:\BITM\Project\Project\obj\Debug\Project.pdb

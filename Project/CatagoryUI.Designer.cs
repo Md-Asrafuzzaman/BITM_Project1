@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatagoryUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saveButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +44,14 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.catagoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.catagoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -71,19 +76,18 @@
             // 
             // showDataGridView
             // 
+            this.showDataGridView.AutoGenerateColumns = false;
             this.showDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SL});
-            this.showDataGridView.Location = new System.Drawing.Point(61, 270);
+            this.SL,
+            this.categoryCodeDataGridViewTextBoxColumn,
+            this.categoryNameDataGridViewTextBoxColumn});
+            this.showDataGridView.DataSource = this.catagoryBindingSource;
+            this.showDataGridView.Location = new System.Drawing.Point(61, 272);
             this.showDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(605, 142);
             this.showDataGridView.TabIndex = 6;
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.Name = "SL";
             // 
             // saveButton
             // 
@@ -157,6 +161,7 @@
             this.forwardButton.Size = new System.Drawing.Size(40, 46);
             this.forwardButton.TabIndex = 7;
             this.forwardButton.UseVisualStyleBackColor = true;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // backButton
             // 
@@ -168,6 +173,7 @@
             this.backButton.Size = new System.Drawing.Size(51, 46);
             this.backButton.TabIndex = 4;
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // logoutButton
             // 
@@ -179,6 +185,7 @@
             this.logoutButton.Size = new System.Drawing.Size(52, 46);
             this.logoutButton.TabIndex = 3;
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // homeButton
             // 
@@ -190,6 +197,7 @@
             this.homeButton.Size = new System.Drawing.Size(62, 48);
             this.homeButton.TabIndex = 2;
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // searchTextBox
             // 
@@ -209,6 +217,32 @@
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // catagoryBindingSource
+            // 
+            this.catagoryBindingSource.DataSource = typeof(Project.Model.Catagory);
+            // 
+            // SL
+            // 
+            this.SL.DataPropertyName = "SL";
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
+            this.SL.Width = 140;
+            // 
+            // categoryCodeDataGridViewTextBoxColumn
+            // 
+            this.categoryCodeDataGridViewTextBoxColumn.DataPropertyName = "Category_Code";
+            this.categoryCodeDataGridViewTextBoxColumn.HeaderText = "Category_Code";
+            this.categoryCodeDataGridViewTextBoxColumn.Name = "categoryCodeDataGridViewTextBoxColumn";
+            this.categoryCodeDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // categoryNameDataGridViewTextBoxColumn
+            // 
+            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "Category_Name";
+            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "Category_Name";
+            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            this.categoryNameDataGridViewTextBoxColumn.Width = 225;
             // 
             // CatagoryUI
             // 
@@ -219,11 +253,13 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CatagoryUI";
+            this.Load += new System.EventHandler(this.CatagoryUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.catagoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,11 +276,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.Button forwardButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button homeButton;
+        private System.Windows.Forms.BindingSource catagoryBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
     }
 }
 

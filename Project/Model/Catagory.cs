@@ -9,7 +9,9 @@ namespace Project.Model
 {
    public class Catagory
    {
-       public string Code { get; set; }
-       public string Name { get; set; }
+       public int Id { get; set; }
+       public int SL { get; set; }
+       public string Category_Code { get; set; }
+       public string Category_Name { get; set; }
    }
 }

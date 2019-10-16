@@ -1,0 +1,10 @@
+CREATE DATABASE ProjectDB
+USE ProjectDB
+
+CREATE TABLE Category
+(
+	Id int IDENTITY(1,1),
+	Code VARCHAR,
+    Name VARCHAR
+)
+SELECT * FROM Category
