@@ -80,5 +80,18 @@ namespace Project
         {
             showDataGridView.DataSource = _catagoryManager.Display();
         }
+
+        private void showDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (showDataGridView.Columns[e.ColumnIndex].Name.Equals("Edit"))
+            {
+                int i;
+                string button = "Update";
+                i = showDataGridView.SelectedCells[0].RowIndex;
+                codeTextBox.Text = showDataGridView.Rows[i].Cells[2].Value.ToString();
+                nameTextBox.Text = showDataGridView.Rows[i].Cells[3].Value.ToString();
+                saveButton.Text = button;
+            }  
+        }
     }
 }

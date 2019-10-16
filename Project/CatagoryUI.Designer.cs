@@ -48,6 +48,7 @@
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,13 +82,15 @@
             this.showDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SL,
             this.categoryCodeDataGridViewTextBoxColumn,
-            this.categoryNameDataGridViewTextBoxColumn});
+            this.categoryNameDataGridViewTextBoxColumn,
+            this.Edit});
             this.showDataGridView.DataSource = this.catagoryBindingSource;
-            this.showDataGridView.Location = new System.Drawing.Point(61, 272);
+            this.showDataGridView.Location = new System.Drawing.Point(61, 282);
             this.showDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(605, 142);
             this.showDataGridView.TabIndex = 6;
+            this.showDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showDataGridView_CellContentClick);
             // 
             // saveButton
             // 
@@ -228,21 +231,30 @@
             this.SL.DataPropertyName = "SL";
             this.SL.HeaderText = "SL";
             this.SL.Name = "SL";
-            this.SL.Width = 140;
+            this.SL.Width = 60;
             // 
             // categoryCodeDataGridViewTextBoxColumn
             // 
             this.categoryCodeDataGridViewTextBoxColumn.DataPropertyName = "Category_Code";
             this.categoryCodeDataGridViewTextBoxColumn.HeaderText = "Category_Code";
             this.categoryCodeDataGridViewTextBoxColumn.Name = "categoryCodeDataGridViewTextBoxColumn";
-            this.categoryCodeDataGridViewTextBoxColumn.Width = 220;
+            this.categoryCodeDataGridViewTextBoxColumn.Width = 200;
             // 
             // categoryNameDataGridViewTextBoxColumn
             // 
             this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "Category_Name";
             this.categoryNameDataGridViewTextBoxColumn.HeaderText = "Category_Name";
             this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
-            this.categoryNameDataGridViewTextBoxColumn.Width = 225;
+            this.categoryNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "Id";
+            this.Edit.HeaderText = "Activity";
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 110;
             // 
             // CatagoryUI
             // 
@@ -284,6 +296,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
     }
 }
 
