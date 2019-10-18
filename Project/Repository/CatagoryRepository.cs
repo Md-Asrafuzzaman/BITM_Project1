@@ -17,7 +17,7 @@ namespace Project.Repository
         {
             bool isAdded = false;
              // SQL connection 
-                string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
+                string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 //Sql Command
 
@@ -44,7 +44,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -72,7 +72,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -98,7 +98,7 @@ namespace Project.Repository
         public List<Catagory> Display()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -113,7 +113,7 @@ namespace Project.Repository
             {
                 Catagory catagorie = new Catagory();
                 catagorie.SL = i;
-                catagorie.Id = Convert.ToInt32(sqlDataReader["Category_Id"]);
+                catagorie.Id = Convert.ToInt32(sqlDataReader["Catergory_Id"]);
                 catagorie.Category_Code = sqlDataReader["Category_Code"].ToString();
                 catagorie.Category_Name = sqlDataReader["Category_Name"].ToString();
                 catagories.Add(catagorie);

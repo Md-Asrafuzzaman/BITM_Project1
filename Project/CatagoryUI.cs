@@ -88,8 +88,8 @@ namespace Project
                 int i;
                 string button = "Update";
                 i = showDataGridView.SelectedCells[0].RowIndex;
-                codeTextBox.Text = showDataGridView.Rows[i].Cells[2].Value.ToString();
-                nameTextBox.Text = showDataGridView.Rows[i].Cells[3].Value.ToString();
+                codeTextBox.Text = showDataGridView.Rows[i].Cells[1].Value.ToString();
+                nameTextBox.Text = showDataGridView.Rows[i].Cells[2].Value.ToString();
                 saveButton.Text = button;
             }  
         }
