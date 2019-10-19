@@ -40,7 +40,7 @@ namespace Project
                 return;
             }
 
-            if (_catagoryManager.AddCustomerInfo(catagory))
+            if (_catagoryManager.AddCategoryInfo(catagory))
             {
                 MessageBox.Show("Category Save");
                 showDataGridView.DataSource = _catagoryManager.Display();

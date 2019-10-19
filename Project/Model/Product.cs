@@ -8,10 +8,12 @@ namespace Project.Model
 {
   public  class Product
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Catagory { get; set; }
-        public string RecordedLevel { get; set; }
-        public string Description { get; set; }
+        public int Product_Id { get; set; }
+        public int SL { get; set; }
+        public string Product_Code { get; set; }
+        public string Product_Name { get; set; }
+        public string Product_Category { get; set; }
+        public string Product_RecordedLevel { get; set; }
+        public string Product_Description { get; set; }
     }
 }

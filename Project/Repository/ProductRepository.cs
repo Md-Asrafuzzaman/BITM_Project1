@@ -13,48 +13,43 @@ namespace Project.Repository
    public class ProductRepository
     {
         //Add Operation Method
-        public bool AddProductInfo(string catagory, string name, string code, string recordedLevel, string description)
+        public bool AddProductInfo(Product product)
         {
-            bool isAdded = false;
-            try
-            { // SQL connection 
-                string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=CoffeeShop; Integrated Security=True";
+            bool isAdded = false; 
+           // SQL connection 
+                string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 //Sql Command
 
-                string commandString = "INSERT INTO Customer(CustomerName,CustomerAddress,CustomerContact) VALUES ('" + catagory + "','" + name + "','" + code + "','" + recordedLevel + "','" + description + "')";
+                string commandString = "INSERT INTO Product(Product_Code,Product_Name,Product_Category,Product_RecordedLevel,Product_Description) VALUES ('" + product.Product_Code + "','" + product.Product_Name + "','" + product.Product_Category + "','" + product.Product_RecordedLevel + "','" + product.Product_Description + "')";
                 SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
-                sqlConnection.Open();
-                int isExecute = sqlCommand.ExecuteNonQuery();
-                if (isExecute > 0)
-                {
-                    isAdded = true;
-                }
-                else
-                {
-                    //MessageBox.Show("Insertion Failed");
-                }
-
-                sqlConnection.Close();
-            }
-            catch (Exception)
+            sqlConnection.Open();
+            int isExecute = sqlCommand.ExecuteNonQuery();
+            if (isExecute > 0)
             {
-                //MessageBox.Show(ex.Message);
+                isAdded = true;
             }
+            else
+            {
+                //MessageBox.Show("Insertion Failed");
+            }
+
+            sqlConnection.Close();
+
             return isAdded;
         }
 
-        public bool IsNameExists(Product name)
+        public bool IsNameExists(Product product)
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=CoffeeShop; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
-            string commandString = @"SELECT * FROM Product WHERE ProductName ='" + name + "'";
+            string commandString = @"SELECT * FROM Product WHERE Product_Name ='" + product.Product_Name + "'";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             //Open
@@ -73,16 +68,16 @@ namespace Project.Repository
             return exists;
         }
 
-        public bool IsCodeExist(Product name)
+        public bool IsCodeExist(Product product)
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=Project; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
-            string commandString = @"SELECT * FROM Product WHERE ProductName ='" + name + "'";
+            string commandString = @"SELECT * FROM Product WHERE Product_Code ='" + product.Product_Code + "'";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             //Open
@@ -99,6 +94,62 @@ namespace Project.Repository
             sqlConnection.Close();
 
             return exists;
+        }
+        public List<Catagory> Display()
+        {
+            //Connection
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            //Command 
+            //INSERT INTO Items (Name, Price) Values ('Black', 120)
+            string commandString = @"SELECT * FROM Category";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+            //Open
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            List<Catagory> catagories = new List<Catagory>();
+            //int i = 1;
+            while (sqlDataReader.Read())
+            {
+                Catagory catagorie = new Catagory();
+                //catagorie.SL = i;
+                catagorie.Id = Convert.ToInt32(sqlDataReader["Category_Id"]);
+                //catagorie.Category_Code = sqlDataReader["Category_Code"].ToString();
+                catagorie.Category_Name = sqlDataReader["Category_Name"].ToString();
+                catagories.Add(catagorie);
+                //i++;
+            }
+            sqlConnection.Close();
+            return catagories;
+        }
+
+        public List<Catagory> DisplayProduct()
+        {
+            //Connection
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            //Command 
+            //INSERT INTO Items (Name, Price) Values ('Black', 120)
+            string commandString = @"SELECT * FROM Category";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+            //Open
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            List<Catagory> catagories = new List<Catagory>();
+            //int i = 1;
+            while (sqlDataReader.Read())
+            {
+                Catagory catagorie = new Catagory();
+                //catagorie.SL = i;
+                catagorie.Id = Convert.ToInt32(sqlDataReader["Category_Id"]);
+                //catagorie.Category_Code = sqlDataReader["Category_Code"].ToString();
+                catagorie.Category_Name = sqlDataReader["Category_Name"].ToString();
+                catagories.Add(catagorie);
+                //i++;
+            }
+            sqlConnection.Close();
+            return catagories;
+
         }
     }
 }

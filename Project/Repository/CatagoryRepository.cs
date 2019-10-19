@@ -13,7 +13,7 @@ namespace Project.Repository
   public class CatagoryRepository
     {
         //Add Operation Method
-        public bool AddCustomerInfo(Catagory category)
+        public bool AddCategoryInfo(Catagory category)
         {
             bool isAdded = false;
              // SQL connection 
