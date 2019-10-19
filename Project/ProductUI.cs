@@ -26,7 +26,7 @@ namespace Project
         private void saveButton_Click(object sender, EventArgs e)
         {
             //Checking Name UNIQUE
-            product.Name = nameTextBox.Text;
+            product.Product_Name = nameTextBox.Text;
             if (_productManager.IsNameExists(product))
             {
                 MessageBox.Show(nameTextBox.Text + " Already Exists!");
@@ -34,13 +34,16 @@ namespace Project
             }
 
             //Checking Code UNIQUE
-            product.Code = codeTextBox.Text;
+            product.Product_Code = codeTextBox.Text;
             if (_productManager.IsCodeExist(product))
             {
                 MessageBox.Show(codeTextBox.Text + " Already Exists!");
                 return;
             }
-            bool isAdded = _productManager.AddProductInfo(catagoryComboBox.Text, nameTextBox.Text, codeTextBox.Text, recordedTextBox.Text, descriptionTextBox.Text);
+            product.Product_Category = catagoryComboBox.Text;
+            product.Product_RecordedLevel = recordedTextBox.Text;
+            product.Product_Description = descriptionTextBox.Text;
+            bool isAdded = _productManager.AddProductInfo(product);
             if (isAdded)
             {
                 MessageBox.Show("Saved");
@@ -50,6 +53,11 @@ namespace Project
             {
                 MessageBox.Show("Not Saved");
             }
+        }
+
+        private void ProductUI_Load(object sender, EventArgs e)
+        {
+           catagoryComboBox.DataSource = _productManager.Display();
         }
     }
     

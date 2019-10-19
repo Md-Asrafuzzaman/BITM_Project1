@@ -22,9 +22,13 @@ namespace Project.BLL
         {
             return _productRepository.IsCodeExist(product);
         }
-        public bool AddProductInfo(string catagory, string name, string code, string recordedLevel, string description)
+        public bool AddProductInfo(Product product)
         {
-            return _productRepository.AddProductInfo(catagory, name, code, recordedLevel, description);
+            return _productRepository.AddProductInfo(product);
+        }
+        public List<Catagory> Display()
+        {
+           return _productRepository.Display();
         }
     }
 }

@@ -14,9 +14,9 @@ namespace Project.BLL
     {
         CatagoryRepository _catagoryRepository = new CatagoryRepository();
         //Catagory catagory = new Catagory();
-        public bool AddCustomerInfo(Catagory category)
+        public bool AddCategoryInfo(Catagory category)
         {
-            return _catagoryRepository.AddCustomerInfo(category);
+            return _catagoryRepository.AddCategoryInfo(category);
         }
         public bool IsNameExists(Catagory catagory)
         {

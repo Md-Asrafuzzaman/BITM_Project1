@@ -3,8 +3,10 @@ USE ProjectDB
 
 CREATE TABLE Category
 (
-	Id int IDENTITY(1,1),
-	Code VARCHAR,
-    Name VARCHAR
+	Category_Id int IDENTITY(1,1),
+	Category_Code VARCHAR(20),
+    Category_Name VARCHAR(20)
 )
-SELECT * FROM Category
+Drop TABLE Category
+Select * From Category
+delete from Category

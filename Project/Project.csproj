@@ -103,7 +103,11 @@
       <DependentUpon>SupplierUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Project.Model.Catagory.datasource" />
+<<<<<<< HEAD
     <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
+=======
+    <None Include="Properties\DataSources\Project.Model.Product.datasource" />
+>>>>>>> 7fce33d28d697f695796459a61e95f8d0b8decd3
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
