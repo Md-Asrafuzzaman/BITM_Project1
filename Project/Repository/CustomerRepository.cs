@@ -75,7 +75,7 @@ namespace Project.Repository
 
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
-            string commandString = @"SELECT * FROM Customer WHERE Customer_Id ='" + id.Customer_Code + "'";
+            string commandString = @"SELECT * FROM Customer WHERE Customer_Code ='" + id.Customer_Code + "'";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             //Open

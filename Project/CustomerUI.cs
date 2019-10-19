@@ -71,16 +71,20 @@ namespace Project
 
         private void showDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i;
-            string button = "Update";
-            i = showDataGridView.SelectedCells[0].RowIndex;
-            codeTextBox.Text = showDataGridView.Rows[i].Cells[1].Value.ToString();
-            nameTextBox.Text = showDataGridView.Rows[i].Cells[2].Value.ToString();
-            addressTextBox.Text = showDataGridView.Rows[i].Cells[3].Value.ToString();
-            emailTextBox.Text = showDataGridView.Rows[i].Cells[4].Value.ToString();
-            contactTextBox.Text = showDataGridView.Rows[i].Cells[5].Value.ToString();
-            loyalityNumericUpDown.Text = showDataGridView.Rows[i].Cells[6].Value.ToString();
-            saveButton.Text = button;
+            if (showDataGridView.Columns[e.ColumnIndex].Name.Equals("Edit"))
+            {
+                int i;
+                string button = "Update";
+                i = showDataGridView.SelectedCells[0].RowIndex;
+                codeTextBox.Text = showDataGridView.Rows[i].Cells[1].Value.ToString();
+                nameTextBox.Text = showDataGridView.Rows[i].Cells[2].Value.ToString();
+                addressTextBox.Text = showDataGridView.Rows[i].Cells[3].Value.ToString();
+                emailTextBox.Text = showDataGridView.Rows[i].Cells[4].Value.ToString();
+                contactTextBox.Text = showDataGridView.Rows[i].Cells[5].Value.ToString();
+                loyalityNumericUpDown.Text = showDataGridView.Rows[i].Cells[6].Value.ToString();
+                saveButton.Text = button;
+            }
+            
         }
     }
 }

@@ -103,6 +103,7 @@
       <DependentUpon>SupplierUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Project.Model.Catagory.datasource" />
+    <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,6 +117,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
