@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.loyalityNumericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.loyalityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saveButton = new System.Windows.Forms.Button();
@@ -53,14 +53,14 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loyalityNumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loyalityNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.loyalityNumericUpDown1);
+            this.groupBox1.Controls.Add(this.loyalityNumericUpDown);
             this.groupBox1.Controls.Add(this.showDataGridView);
             this.groupBox1.Controls.Add(this.saveButton);
             this.groupBox1.Controls.Add(this.label6);
@@ -82,12 +82,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer";
             // 
-            // loyalityNumericUpDown1
+            // loyalityNumericUpDown
             // 
-            this.loyalityNumericUpDown1.Location = new System.Drawing.Point(255, 236);
-            this.loyalityNumericUpDown1.Name = "loyalityNumericUpDown1";
-            this.loyalityNumericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.loyalityNumericUpDown1.TabIndex = 9;
+            this.loyalityNumericUpDown.Location = new System.Drawing.Point(255, 236);
+            this.loyalityNumericUpDown.Name = "loyalityNumericUpDown";
+            this.loyalityNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.loyalityNumericUpDown.TabIndex = 9;
             // 
             // showDataGridView
             // 
@@ -98,6 +98,7 @@
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(543, 145);
             this.showDataGridView.TabIndex = 8;
+            this.showDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showDataGridView_CellContentClick);
             // 
             // SL
             // 
@@ -112,6 +113,7 @@
             this.saveButton.TabIndex = 7;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // label6
             // 
@@ -288,9 +290,10 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CustomerUI";
             this.Text = "CustomerUI";
+            this.Load += new System.EventHandler(this.CustomerUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loyalityNumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loyalityNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -301,7 +304,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown loyalityNumericUpDown1;
+        private System.Windows.Forms.NumericUpDown loyalityNumericUpDown;
         private System.Windows.Forms.DataGridView showDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.Button saveButton;
