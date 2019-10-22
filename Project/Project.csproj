@@ -103,18 +103,11 @@
       <DependentUpon>SupplierUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Project.Model.Catagory.datasource" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <None Include="Properties\DataSources\Project.Model.Product.datasource" />
-=======
+
     <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
->>>>>>> 9c2437f503283cdaa051e149bb4df019ae1b3d1d
-=======
-    <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
-=======
+
     <None Include="Properties\DataSources\Project.Model.Product.datasource" />
->>>>>>> 7fce33d28d697f695796459a61e95f8d0b8decd3
->>>>>>> e1f0296e89276e597a12fc770e6717cf790659f2
+
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
