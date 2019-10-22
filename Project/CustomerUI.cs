@@ -35,6 +35,7 @@ namespace Project
             }
 
             //Checking Code UNIQUE
+
             customer.Customer_Code = codeTextBox.Text;
             if (_customerManager.IsCodeExist(customer))
             {
@@ -85,6 +86,20 @@ namespace Project
                 saveButton.Text = button;
             }
             
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            CatagoryUI catagoryUI = new CatagoryUI();
+            catagoryUI.Show();
+            Hide();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            ProductUI productUI = new ProductUI();
+            productUI.Show();
+            Hide();
         }
     }
 }

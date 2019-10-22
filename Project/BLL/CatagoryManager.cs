@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 using Project;
 using Project.Model;
 using Project.Repository;
-
 namespace Project.BLL
 {
    public class CatagoryManager
     {
         CatagoryRepository _catagoryRepository = new CatagoryRepository();
-        //Catagory catagory = new Catagory();
         public bool AddCategoryInfo(Catagory category)
         {
             return _catagoryRepository.AddCategoryInfo(category);

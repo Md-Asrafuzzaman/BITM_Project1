@@ -30,5 +30,10 @@ namespace Project.BLL
         {
            return _productRepository.Display();
         }
+
+        public List<Product> DisplayProduct()
+        {
+           return _productRepository.DisplayProduct();
+        }
     }
 }

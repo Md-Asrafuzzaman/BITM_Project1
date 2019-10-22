@@ -11,13 +11,14 @@ using Project.Model;
 namespace Project.Repository
 {
   public class CatagoryRepository
-    {
+  {
+      
         //Add Operation Method
         public bool AddCategoryInfo(Catagory category)
         {
             bool isAdded = false;
              // SQL connection 
-                string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
+                string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=ProjectDB; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 //Sql Command
 
@@ -44,7 +45,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-VJNJ93K\; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -72,7 +73,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-VJNJ93K\; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -98,7 +99,7 @@ namespace Project.Repository
         public List<Catagory> Display()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-VJNJ93K\; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)

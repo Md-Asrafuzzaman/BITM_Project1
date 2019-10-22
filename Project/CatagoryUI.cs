@@ -58,7 +58,9 @@ namespace Project
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-
+            CatagoryUI catagoryUI = new CatagoryUI();
+            catagoryUI.Show();
+            Hide();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -73,7 +75,9 @@ namespace Project
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-
+            ProductUI productUI = new ProductUI();
+            productUI.Show();
+            Hide();
         }
 
         private void CatagoryUI_Load(object sender, EventArgs e)

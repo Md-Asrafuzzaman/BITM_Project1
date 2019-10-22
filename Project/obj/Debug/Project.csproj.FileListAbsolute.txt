@@ -24,3 +24,16 @@ D:\BITM_Project1\BITM_Project1\BITM_Project1\Project\obj\Debug\Project.csproj.Ge
 D:\BITM_Project1\BITM_Project1\BITM_Project1\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 D:\BITM_Project1\BITM_Project1\BITM_Project1\Project\obj\Debug\Project.exe
 D:\BITM_Project1\BITM_Project1\BITM_Project1\Project\obj\Debug\Project.pdb
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\bin\Debug\Project.exe.config
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\bin\Debug\Project.exe
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\bin\Debug\Project.pdb
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.CatagoryUI.resources
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.CustomerUI.resources
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.ProductUI.resources
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.SupplierUI.resources
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.exe
+C:\Users\Web App Develop .Net\Desktop\BITM_Project1\Project\obj\Debug\Project.pdb

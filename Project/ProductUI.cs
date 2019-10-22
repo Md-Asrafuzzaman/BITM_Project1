@@ -47,7 +47,7 @@ namespace Project
             if (isAdded)
             {
                 MessageBox.Show("Saved");
-                //showDataGridView.DataSource = _productManager.Display();
+                showDataGridView.DataSource = _productManager.DisplayProduct();
             }
             else
             {
@@ -58,6 +58,45 @@ namespace Project
         private void ProductUI_Load(object sender, EventArgs e)
         {
            catagoryComboBox.DataSource = _productManager.Display();
+           showDataGridView.DataSource = _productManager.DisplayProduct();
+
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            CatagoryUI catagoryUI = new CatagoryUI();
+            catagoryUI.Show();
+            Hide();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            CatagoryUI catagoryUI = new CatagoryUI();
+            catagoryUI.Show();
+            Hide();
+        }
+
+        private void forwardButton_Click(object sender, EventArgs e)
+        {
+            CustomerUI customerUI = new CustomerUI();
+            customerUI.Show();
+            Hide();
+        }
+
+        private void showDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (showDataGridView.Columns[e.ColumnIndex].Name.Equals("Edit"))
+            {
+                int i;
+                string button = "Update";
+                i = showDataGridView.SelectedCells[0].RowIndex;
+                catagoryComboBox.Text = showDataGridView.Rows[i].Cells[1].Value.ToString();
+                codeTextBox.Text = showDataGridView.Rows[i].Cells[2].Value.ToString();
+                nameTextBox.Text = showDataGridView.Rows[i].Cells[3].Value.ToString();
+                recordedTextBox.Text = showDataGridView.Rows[i].Cells[4].Value.ToString();
+                descriptionTextBox.Text = showDataGridView.Rows[i].Cells[5].Value.ToString();
+                saveButton.Text = button;
+            }
         }
     }
     

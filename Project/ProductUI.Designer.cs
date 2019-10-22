@@ -32,12 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
-            this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productRecordedLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.saveButton = new System.Windows.Forms.Button();
             this.catagoryComboBox = new System.Windows.Forms.ComboBox();
@@ -58,6 +52,13 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productRecordedLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -97,52 +98,14 @@
             this.productNameDataGridViewTextBoxColumn,
             this.productCategoryDataGridViewTextBoxColumn,
             this.productRecordedLevelDataGridViewTextBoxColumn,
-            this.productDescriptionDataGridViewTextBoxColumn});
+            this.productDescriptionDataGridViewTextBoxColumn,
+            this.Edit});
             this.showDataGridView.DataSource = this.productBindingSource;
             this.showDataGridView.Location = new System.Drawing.Point(0, 286);
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(605, 140);
             this.showDataGridView.TabIndex = 8;
-            // 
-            // sLDataGridViewTextBoxColumn
-            // 
-            this.sLDataGridViewTextBoxColumn.DataPropertyName = "SL";
-            this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
-            this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
-            this.sLDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // productCodeDataGridViewTextBoxColumn
-            // 
-            this.productCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code";
-            this.productCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code";
-            this.productCodeDataGridViewTextBoxColumn.Name = "productCodeDataGridViewTextBoxColumn";
-            this.productCodeDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product_Name";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            // 
-            // productCategoryDataGridViewTextBoxColumn
-            // 
-            this.productCategoryDataGridViewTextBoxColumn.DataPropertyName = "Product_Category";
-            this.productCategoryDataGridViewTextBoxColumn.HeaderText = "Product_Category";
-            this.productCategoryDataGridViewTextBoxColumn.Name = "productCategoryDataGridViewTextBoxColumn";
-            // 
-            // productRecordedLevelDataGridViewTextBoxColumn
-            // 
-            this.productRecordedLevelDataGridViewTextBoxColumn.DataPropertyName = "Product_RecordedLevel";
-            this.productRecordedLevelDataGridViewTextBoxColumn.HeaderText = "Product_RecordedLevel";
-            this.productRecordedLevelDataGridViewTextBoxColumn.Name = "productRecordedLevelDataGridViewTextBoxColumn";
-            this.productRecordedLevelDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // productDescriptionDataGridViewTextBoxColumn
-            // 
-            this.productDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_Description";
-            this.productDescriptionDataGridViewTextBoxColumn.HeaderText = "Product_Description";
-            this.productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
-            this.productDescriptionDataGridViewTextBoxColumn.Width = 110;
+            this.showDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showDataGridView_CellContentClick);
             // 
             // productBindingSource
             // 
@@ -271,6 +234,7 @@
             this.forwardButton.Size = new System.Drawing.Size(40, 46);
             this.forwardButton.TabIndex = 7;
             this.forwardButton.UseVisualStyleBackColor = true;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // backButton
             // 
@@ -282,6 +246,7 @@
             this.backButton.Size = new System.Drawing.Size(51, 46);
             this.backButton.TabIndex = 4;
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // logoutButton
             // 
@@ -304,6 +269,7 @@
             this.homeButton.Size = new System.Drawing.Size(62, 48);
             this.homeButton.TabIndex = 2;
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // searchTextBox
             // 
@@ -323,6 +289,56 @@
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            // 
+            // sLDataGridViewTextBoxColumn
+            // 
+            this.sLDataGridViewTextBoxColumn.DataPropertyName = "SL";
+            this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
+            this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
+            this.sLDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // productCodeDataGridViewTextBoxColumn
+            // 
+            this.productCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code";
+            this.productCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code";
+            this.productCodeDataGridViewTextBoxColumn.Name = "productCodeDataGridViewTextBoxColumn";
+            this.productCodeDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product_Name";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            // 
+            // productCategoryDataGridViewTextBoxColumn
+            // 
+            this.productCategoryDataGridViewTextBoxColumn.DataPropertyName = "Product_Category";
+            this.productCategoryDataGridViewTextBoxColumn.HeaderText = "Product_Category";
+            this.productCategoryDataGridViewTextBoxColumn.Name = "productCategoryDataGridViewTextBoxColumn";
+            // 
+            // productRecordedLevelDataGridViewTextBoxColumn
+            // 
+            this.productRecordedLevelDataGridViewTextBoxColumn.DataPropertyName = "Product_RecordedLevel";
+            this.productRecordedLevelDataGridViewTextBoxColumn.HeaderText = "Product_RecordedLevel";
+            this.productRecordedLevelDataGridViewTextBoxColumn.Name = "productRecordedLevelDataGridViewTextBoxColumn";
+            this.productRecordedLevelDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // productDescriptionDataGridViewTextBoxColumn
+            // 
+            this.productDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_Description";
+            this.productDescriptionDataGridViewTextBoxColumn.HeaderText = "Product_Description";
+            this.productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
+            this.productDescriptionDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "Product_Id";
+            this.Edit.HeaderText = "Activity";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
             // 
             // ProductUI
             // 
@@ -374,5 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productCategoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productRecordedLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
     }
 }

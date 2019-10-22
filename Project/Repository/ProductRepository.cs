@@ -7,7 +7,6 @@ using System.Data;
 using System.Data.SqlClient;
 using Project;
 using Project.Model;
-
 namespace Project.Repository
 {
    public class ProductRepository
@@ -17,7 +16,7 @@ namespace Project.Repository
         {
             bool isAdded = false; 
            // SQL connection 
-                string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+                string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 //Sql Command
 
@@ -44,7 +43,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -72,7 +71,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -98,7 +97,7 @@ namespace Project.Repository
         public List<Catagory> Display()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -113,7 +112,7 @@ namespace Project.Repository
             {
                 Catagory catagorie = new Catagory();
                 //catagorie.SL = i;
-                catagorie.Id = Convert.ToInt32(sqlDataReader["Category_Id"]);
+                catagorie.Id = Convert.ToInt32(sqlDataReader["Catergory_Id"]);
                 //catagorie.Category_Code = sqlDataReader["Category_Code"].ToString();
                 catagorie.Category_Name = sqlDataReader["Category_Name"].ToString();
                 catagories.Add(catagorie);
@@ -123,32 +122,35 @@ namespace Project.Repository
             return catagories;
         }
 
-        public List<Catagory> DisplayProduct()
+        public List<Product> DisplayProduct()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
-            string commandString = @"SELECT * FROM Category";
+            string commandString = @"SELECT * FROM Product";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
             //Open
             sqlConnection.Open();
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            List<Catagory> catagories = new List<Catagory>();
-            //int i = 1;
+            List<Product> products = new List<Product>();
+            int i = 1;
             while (sqlDataReader.Read())
             {
-                Catagory catagorie = new Catagory();
-                //catagorie.SL = i;
-                catagorie.Id = Convert.ToInt32(sqlDataReader["Category_Id"]);
-                //catagorie.Category_Code = sqlDataReader["Category_Code"].ToString();
-                catagorie.Category_Name = sqlDataReader["Category_Name"].ToString();
-                catagories.Add(catagorie);
-                //i++;
+                Product product = new Product();
+                product.SL = i;
+                product.Product_Id = Convert.ToInt32(sqlDataReader["Product_Id"]);
+                product.Product_Category = sqlDataReader["Product_Category"].ToString();
+                product.Product_Code = sqlDataReader["Product_Code"].ToString();
+                product.Product_Name = sqlDataReader["Product_Name"].ToString();
+                product.Product_RecordedLevel = sqlDataReader["Product_RecordedLevel"].ToString();
+                product.Product_Description = sqlDataReader["Product_Description"].ToString();
+                products.Add(product);
+                i++;
             }
             sqlConnection.Close();
-            return catagories;
+            return products;
 
         }
     }
