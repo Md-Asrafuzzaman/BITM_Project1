@@ -17,7 +17,7 @@ namespace Project.Repository
         {
             bool isAdded = false;
             // SQL connection 
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Sql Command
 
@@ -43,7 +43,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -70,7 +70,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -97,7 +97,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -123,7 +123,7 @@ namespace Project.Repository
         public List<Customer> Display()
         {
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -144,7 +144,7 @@ namespace Project.Repository
                 customer.Customer_Address = sqlDataReader["Customer_Address"].ToString();
                 customer.Customer_Email = sqlDataReader["Customer_Email"].ToString();
                 customer.Customer_Contact = sqlDataReader["Customer_Contact"].ToString();
-                customer.Customer_LoyalityPoint = sqlDataReader["Customer_Loyality"].ToString();
+                customer.Customer_LoyalityPoint = Convert.ToInt32(sqlDataReader["Customer_Loyality"]);
                 customers.Add(customer);
                 i++;
             }

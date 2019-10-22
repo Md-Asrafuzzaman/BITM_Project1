@@ -16,7 +16,7 @@ namespace Project.Repository
         {
             bool isAdded = false; 
            // SQL connection 
-                string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
+                string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 //Sql Command
 
@@ -43,7 +43,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -71,7 +71,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -97,7 +97,7 @@ namespace Project.Repository
         public List<Catagory> Display()
         {
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -112,7 +112,7 @@ namespace Project.Repository
             {
                 Catagory catagorie = new Catagory();
                 //catagorie.SL = i;
-                catagorie.Id = Convert.ToInt32(sqlDataReader["Catergory_Id"]);
+                catagorie.Id = Convert.ToInt32(sqlDataReader["Category_Id"]);
                 //catagorie.Category_Code = sqlDataReader["Category_Code"].ToString();
                 catagorie.Category_Name = sqlDataReader["Category_Name"].ToString();
                 catagories.Add(catagorie);
@@ -125,7 +125,7 @@ namespace Project.Repository
         public List<Product> DisplayProduct()
         {
             //Connection
-            string connectionString = @"Server=PC-301-05\SQLEXPRESS; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -144,7 +144,7 @@ namespace Project.Repository
                 product.Product_Category = sqlDataReader["Product_Category"].ToString();
                 product.Product_Code = sqlDataReader["Product_Code"].ToString();
                 product.Product_Name = sqlDataReader["Product_Name"].ToString();
-                product.Product_RecordedLevel = sqlDataReader["Product_RecordedLevel"].ToString();
+                product.Product_RecordedLevel = Convert.ToInt32(sqlDataReader["Product_RecordedLevel"]);
                 product.Product_Description = sqlDataReader["Product_Description"].ToString();
                 products.Add(product);
                 i++;

@@ -44,7 +44,7 @@ namespace Project
             }
             customer.Customer_Address = addressTextBox.Text;
             customer.Customer_Contact = contactTextBox.Text;
-            customer.Customer_LoyalityPoint = loyalityNumericUpDown.Text;
+            customer.Customer_LoyalityPoint = Convert.ToInt32(loyalityNumericUpDown.Text);
             
             //Checking Email UNIQUE
             customer.Customer_Email = emailTextBox.Text;

@@ -25,6 +25,6 @@ CREATE TABLE Customer
 	Customer_Name VARCHAR(30),
 	Customer_Address VARCHAR(30),
 	Customer_Email VARCHAR(30),
-	Customer_Contact VARCHAR(30),
+	Customer_Contact INT,
 	Customer_Loyality VARCHAR(30)
 )

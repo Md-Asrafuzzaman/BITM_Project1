@@ -16,7 +16,7 @@ namespace Project.Model
         public string Customer_Address { get; set; }
         public string Customer_Email { get; set; }
         public string Customer_Contact { get; set; }
-        public string Customer_LoyalityPoint { get; set; }
+        public int Customer_LoyalityPoint { get; set; }
 
     }
 }

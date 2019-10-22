@@ -13,7 +13,7 @@ namespace Project.Model
         public string Product_Code { get; set; }
         public string Product_Name { get; set; }
         public string Product_Category { get; set; }
-        public string Product_RecordedLevel { get; set; }
+        public int Product_RecordedLevel { get; set; }
         public string Product_Description { get; set; }
     }
 }   

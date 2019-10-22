@@ -41,7 +41,7 @@ namespace Project
                 return;
             }
             product.Product_Category = catagoryComboBox.Text;
-            product.Product_RecordedLevel = recordedTextBox.Text;
+            product.Product_RecordedLevel = Convert.ToInt32(recordedTextBox.Text);
             product.Product_Description = descriptionTextBox.Text;
             bool isAdded = _productManager.AddProductInfo(product);
             if (isAdded)
