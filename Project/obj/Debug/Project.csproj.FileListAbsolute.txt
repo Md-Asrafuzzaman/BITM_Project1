@@ -50,3 +50,16 @@ D:\BITM\BITM_Project\BITM_Project1\Project\obj\Debug\Project.csproj.GenerateReso
 D:\BITM\BITM_Project\BITM_Project1\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 D:\BITM\BITM_Project\BITM_Project1\Project\obj\Debug\Project.exe
 D:\BITM\BITM_Project\BITM_Project1\Project\obj\Debug\Project.pdb
+C:\Users\User\Desktop\Project\BITM_Project1\Project\bin\Debug\Project.exe.config
+C:\Users\User\Desktop\Project\BITM_Project1\Project\bin\Debug\Project.exe
+C:\Users\User\Desktop\Project\BITM_Project1\Project\bin\Debug\Project.pdb
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.CatagoryUI.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.CustomerUI.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.ProductUI.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.SupplierUI.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.exe
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.pdb
