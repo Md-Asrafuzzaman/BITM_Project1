@@ -86,9 +86,9 @@
             this.showDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SL});
-            this.showDataGridView.Location = new System.Drawing.Point(31, 291);
+            this.showDataGridView.Location = new System.Drawing.Point(0, 291);
             this.showDataGridView.Name = "showDataGridView";
-            this.showDataGridView.Size = new System.Drawing.Size(543, 145);
+            this.showDataGridView.Size = new System.Drawing.Size(605, 135);
             this.showDataGridView.TabIndex = 8;
             // 
             // SL

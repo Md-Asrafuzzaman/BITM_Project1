@@ -126,6 +126,7 @@
     <None Include="Properties\DataSources\Project.Model.Catagory.datasource" />
     <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
     <None Include="Properties\DataSources\Project.Model.Product.datasource" />
+    <None Include="Properties\DataSources\Project.Model.Sales.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

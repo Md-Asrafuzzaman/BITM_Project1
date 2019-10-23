@@ -38,12 +38,12 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.loyalityPointNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.loyalityPointTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.addButton = new System.Windows.Forms.Button();
@@ -66,6 +66,13 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mRPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMRPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.grandTotalTextBox = new System.Windows.Forms.TextBox();
@@ -74,13 +81,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loyalityPointNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catagoryBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -166,11 +173,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Beige;
-            this.groupBox1.Controls.Add(this.loyalityPointNumericUpDown);
             this.groupBox1.Controls.Add(this.customerComboBox);
             this.groupBox1.Controls.Add(this.customerDateTimePicker);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.loyalityPointTextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(27, 84);
             this.groupBox1.Name = "groupBox1";
@@ -178,13 +185,6 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer";
-            // 
-            // loyalityPointNumericUpDown
-            // 
-            this.loyalityPointNumericUpDown.Location = new System.Drawing.Point(104, 72);
-            this.loyalityPointNumericUpDown.Name = "loyalityPointNumericUpDown";
-            this.loyalityPointNumericUpDown.Size = new System.Drawing.Size(130, 20);
-            this.loyalityPointNumericUpDown.TabIndex = 4;
             // 
             // customerComboBox
             // 
@@ -226,6 +226,14 @@
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Loyality Point";
+            // 
+            // loyalityPointTextBox
+            // 
+            this.loyalityPointTextBox.Location = new System.Drawing.Point(104, 74);
+            this.loyalityPointTextBox.Name = "loyalityPointTextBox";
+            this.loyalityPointTextBox.Size = new System.Drawing.Size(130, 20);
+            this.loyalityPointTextBox.TabIndex = 1;
+            this.loyalityPointTextBox.TextChanged += new System.EventHandler(this.loyalityPointTextBox_TextChanged);
             // 
             // label1
             // 
@@ -313,6 +321,7 @@
             this.mrpTextBox.Name = "mrpTextBox";
             this.mrpTextBox.Size = new System.Drawing.Size(130, 20);
             this.mrpTextBox.TabIndex = 1;
+            this.mrpTextBox.TextChanged += new System.EventHandler(this.mrpTextBox_TextChanged);
             // 
             // label15
             // 
@@ -329,6 +338,7 @@
             this.totalMrpTextBox.Name = "totalMrpTextBox";
             this.totalMrpTextBox.Size = new System.Drawing.Size(130, 20);
             this.totalMrpTextBox.TabIndex = 1;
+            this.totalMrpTextBox.TextChanged += new System.EventHandler(this.totalMrpTextBox_TextChanged);
             // 
             // label11
             // 
@@ -386,6 +396,7 @@
             this.discountTextBox.Name = "discountTextBox";
             this.discountTextBox.Size = new System.Drawing.Size(130, 20);
             this.discountTextBox.TabIndex = 1;
+            this.discountTextBox.TextChanged += new System.EventHandler(this.discountTextBox_TextChanged);
             // 
             // label10
             // 
@@ -426,11 +437,71 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sLDataGridViewTextBoxColumn,
+            this.productDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.mRPDataGridViewTextBoxColumn,
+            this.totalMRPDataGridViewTextBoxColumn,
+            this.Edit});
+            this.dataGridView1.DataSource = this.salesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 104);
+            this.dataGridView1.Size = new System.Drawing.Size(434, 104);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // sLDataGridViewTextBoxColumn
+            // 
+            this.sLDataGridViewTextBoxColumn.DataPropertyName = "SL";
+            this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
+            this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
+            this.sLDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            this.productDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // mRPDataGridViewTextBoxColumn
+            // 
+            this.mRPDataGridViewTextBoxColumn.DataPropertyName = "MRP";
+            this.mRPDataGridViewTextBoxColumn.HeaderText = "MRP";
+            this.mRPDataGridViewTextBoxColumn.Name = "mRPDataGridViewTextBoxColumn";
+            this.mRPDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // totalMRPDataGridViewTextBoxColumn
+            // 
+            this.totalMRPDataGridViewTextBoxColumn.DataPropertyName = "Total_MRP";
+            this.totalMRPDataGridViewTextBoxColumn.HeaderText = "Total_MRP";
+            this.totalMRPDataGridViewTextBoxColumn.Name = "totalMRPDataGridViewTextBoxColumn";
+            this.totalMRPDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "SL";
+            this.Edit.HeaderText = "Action";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 80;
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(Project.Model.Sales);
             // 
             // label9
             // 
@@ -496,7 +567,6 @@
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loyalityPointNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -505,6 +575,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,9 +620,16 @@
         private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.NumericUpDown loyalityPointNumericUpDown;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource catagoryBindingSource;
+        private System.Windows.Forms.BindingSource salesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mRPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalMRPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.TextBox loyalityPointTextBox;
     }
 }
