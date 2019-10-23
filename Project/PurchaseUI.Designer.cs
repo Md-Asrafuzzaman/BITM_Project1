@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Purchase
+    partial class PurchaseUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.suppliercomboBox = new System.Windows.Forms.ComboBox();
             this.supplyDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -46,31 +46,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.catagoryComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.addButton = new System.Windows.Forms.Button();
             this.supplierProductsComboBox = new System.Windows.Forms.ComboBox();
+            this.ExpireDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.manufactureDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.codeTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.availableQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.quantityTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.totalPriceTextBox = new System.Windows.Forms.TextBox();
+            this.remarksTextBox = new System.Windows.Forms.TextBox();
+            this.mrpTextBox = new System.Windows.Forms.TextBox();
+            this.PreviousMrpTextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.previousUnitPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.unitPriceTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.previousUnitPriceTextBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.totalPriceTextBox = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.PreviousMrpTextBox = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.mrpTextBox = new System.Windows.Forms.TextBox();
-            this.manufactureDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ExpireDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.remarksTextBox = new System.Windows.Forms.TextBox();
-            this.addButton = new System.Windows.Forms.Button();
+            this.quantityTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.availableQuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.codeTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.submitButton = new System.Windows.Forms.Button();
@@ -89,9 +89,9 @@
             this.groupBox1.Controls.Add(this.billTextBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(53, 71);
+            this.groupBox1.Location = new System.Drawing.Point(37, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(719, 48);
+            this.groupBox1.Size = new System.Drawing.Size(735, 48);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Supplier";
@@ -120,7 +120,6 @@
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Supplier";
-            
             // 
             // billTextBox
             // 
@@ -156,10 +155,10 @@
             this.panel2.Controls.Add(this.homeButton);
             this.panel2.Controls.Add(this.searchTextBox);
             this.panel2.Controls.Add(this.searchButton);
-            this.panel2.Location = new System.Drawing.Point(108, 4);
+            this.panel2.Location = new System.Drawing.Point(37, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(605, 64);
+            this.panel2.Size = new System.Drawing.Size(734, 64);
             this.panel2.TabIndex = 4;
             // 
             // forwardButton
@@ -172,6 +171,7 @@
             this.forwardButton.Size = new System.Drawing.Size(40, 46);
             this.forwardButton.TabIndex = 7;
             this.forwardButton.UseVisualStyleBackColor = true;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // backButton
             // 
@@ -205,6 +205,7 @@
             this.homeButton.Size = new System.Drawing.Size(62, 48);
             this.homeButton.TabIndex = 2;
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // searchTextBox
             // 
@@ -272,12 +273,21 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(113, 136);
+            this.groupBox2.Location = new System.Drawing.Point(37, 136);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(600, 234);
+            this.groupBox2.Size = new System.Drawing.Size(734, 234);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Products";
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(479, 191);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(65, 23);
+            this.addButton.TabIndex = 4;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
             // 
             // supplierProductsComboBox
             // 
@@ -286,6 +296,22 @@
             this.supplierProductsComboBox.Name = "supplierProductsComboBox";
             this.supplierProductsComboBox.Size = new System.Drawing.Size(130, 21);
             this.supplierProductsComboBox.TabIndex = 2;
+            // 
+            // ExpireDateTimePicker
+            // 
+            this.ExpireDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ExpireDateTimePicker.Location = new System.Drawing.Point(117, 151);
+            this.ExpireDateTimePicker.Name = "ExpireDateTimePicker";
+            this.ExpireDateTimePicker.Size = new System.Drawing.Size(130, 20);
+            this.ExpireDateTimePicker.TabIndex = 3;
+            // 
+            // manufactureDateTimePicker
+            // 
+            this.manufactureDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.manufactureDateTimePicker.Location = new System.Drawing.Point(117, 122);
+            this.manufactureDateTimePicker.Name = "manufactureDateTimePicker";
+            this.manufactureDateTimePicker.Size = new System.Drawing.Size(130, 20);
+            this.manufactureDateTimePicker.TabIndex = 3;
             // 
             // label5
             // 
@@ -296,30 +322,127 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Supplier";
             // 
-            // label6
+            // totalPriceTextBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Code";
+            this.totalPriceTextBox.Location = new System.Drawing.Point(414, 71);
+            this.totalPriceTextBox.Name = "totalPriceTextBox";
+            this.totalPriceTextBox.Size = new System.Drawing.Size(130, 20);
+            this.totalPriceTextBox.TabIndex = 1;
             // 
-            // codeTextBox
+            // remarksTextBox
             // 
-            this.codeTextBox.Location = new System.Drawing.Point(117, 70);
-            this.codeTextBox.Name = "codeTextBox";
-            this.codeTextBox.Size = new System.Drawing.Size(130, 20);
-            this.codeTextBox.TabIndex = 1;
+            this.remarksTextBox.Location = new System.Drawing.Point(117, 188);
+            this.remarksTextBox.Multiline = true;
+            this.remarksTextBox.Name = "remarksTextBox";
+            this.remarksTextBox.Size = new System.Drawing.Size(356, 32);
+            this.remarksTextBox.TabIndex = 1;
             // 
-            // label7
+            // mrpTextBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Available quantity";
+            this.mrpTextBox.Location = new System.Drawing.Point(414, 155);
+            this.mrpTextBox.Name = "mrpTextBox";
+            this.mrpTextBox.Size = new System.Drawing.Size(130, 20);
+            this.mrpTextBox.TabIndex = 1;
+            // 
+            // PreviousMrpTextBox
+            // 
+            this.PreviousMrpTextBox.Location = new System.Drawing.Point(414, 130);
+            this.PreviousMrpTextBox.Name = "PreviousMrpTextBox";
+            this.PreviousMrpTextBox.Size = new System.Drawing.Size(130, 20);
+            this.PreviousMrpTextBox.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(26, 191);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Remarks";
+            // 
+            // previousUnitPriceTextBox
+            // 
+            this.previousUnitPriceTextBox.Location = new System.Drawing.Point(414, 101);
+            this.previousUnitPriceTextBox.Name = "previousUnitPriceTextBox";
+            this.previousUnitPriceTextBox.Size = new System.Drawing.Size(130, 20);
+            this.previousUnitPriceTextBox.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(262, 158);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "MRP(TK)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(262, 78);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Total Price";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(262, 133);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(95, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Previous MRP(TK)";
+            // 
+            // unitPriceTextBox
+            // 
+            this.unitPriceTextBox.Location = new System.Drawing.Point(414, 45);
+            this.unitPriceTextBox.Name = "unitPriceTextBox";
+            this.unitPriceTextBox.Size = new System.Drawing.Size(130, 20);
+            this.unitPriceTextBox.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(262, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(117, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Previous Unit Price(TK)";
+            // 
+            // quantityTextBox
+            // 
+            this.quantityTextBox.Location = new System.Drawing.Point(414, 19);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.Size = new System.Drawing.Size(130, 20);
+            this.quantityTextBox.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(262, 51);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Unit Price";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(262, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Quantity";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Manufacture Date";
             // 
             // availableQuantityTextBox
             // 
@@ -337,172 +460,39 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Expire Date";
             // 
-            // label9
+            // codeTextBox
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Manufacture Date";
+            this.codeTextBox.Location = new System.Drawing.Point(117, 70);
+            this.codeTextBox.Name = "codeTextBox";
+            this.codeTextBox.Size = new System.Drawing.Size(130, 20);
+            this.codeTextBox.TabIndex = 1;
             // 
-            // label10
+            // label7
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(262, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Quantity";
-            
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Available quantity";
             // 
-            // quantityTextBox
+            // label6
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(414, 19);
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(130, 20);
-            this.quantityTextBox.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(262, 51);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Unit Price";
-           
-            // 
-            // unitPriceTextBox
-            // 
-            this.unitPriceTextBox.Location = new System.Drawing.Point(414, 45);
-            this.unitPriceTextBox.Name = "unitPriceTextBox";
-            this.unitPriceTextBox.Size = new System.Drawing.Size(130, 20);
-            this.unitPriceTextBox.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(262, 105);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Previous Unit Price(TK)";
-            
-            // 
-            // previousUnitPriceTextBox
-            // 
-            this.previousUnitPriceTextBox.Location = new System.Drawing.Point(414, 101);
-            this.previousUnitPriceTextBox.Name = "previousUnitPriceTextBox";
-            this.previousUnitPriceTextBox.Size = new System.Drawing.Size(130, 20);
-            this.previousUnitPriceTextBox.TabIndex = 1;
-            
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(262, 78);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Total Price";
-            
-            // 
-            // totalPriceTextBox
-            // 
-            this.totalPriceTextBox.Location = new System.Drawing.Point(414, 71);
-            this.totalPriceTextBox.Name = "totalPriceTextBox";
-            this.totalPriceTextBox.Size = new System.Drawing.Size(130, 20);
-            this.totalPriceTextBox.TabIndex = 1;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(262, 133);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Previous MRP(TK)";
-            
-            // 
-            // PreviousMrpTextBox
-            // 
-            this.PreviousMrpTextBox.Location = new System.Drawing.Point(414, 130);
-            this.PreviousMrpTextBox.Name = "PreviousMrpTextBox";
-            this.PreviousMrpTextBox.Size = new System.Drawing.Size(130, 20);
-            this.PreviousMrpTextBox.TabIndex = 1;
-            
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(262, 158);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "MRP(TK)";
-           
-            // 
-            // mrpTextBox
-            // 
-            this.mrpTextBox.Location = new System.Drawing.Point(414, 155);
-            this.mrpTextBox.Name = "mrpTextBox";
-            this.mrpTextBox.Size = new System.Drawing.Size(130, 20);
-            this.mrpTextBox.TabIndex = 1;
-            
-            // 
-            // manufactureDateTimePicker
-            // 
-            this.manufactureDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.manufactureDateTimePicker.Location = new System.Drawing.Point(117, 122);
-            this.manufactureDateTimePicker.Name = "manufactureDateTimePicker";
-            this.manufactureDateTimePicker.Size = new System.Drawing.Size(130, 20);
-            this.manufactureDateTimePicker.TabIndex = 3;
-            // 
-            // ExpireDateTimePicker
-            // 
-            this.ExpireDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ExpireDateTimePicker.Location = new System.Drawing.Point(117, 151);
-            this.ExpireDateTimePicker.Name = "ExpireDateTimePicker";
-            this.ExpireDateTimePicker.Size = new System.Drawing.Size(130, 20);
-            this.ExpireDateTimePicker.TabIndex = 3;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(26, 191);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Remarks";
-            
-            // 
-            // remarksTextBox
-            // 
-            this.remarksTextBox.Location = new System.Drawing.Point(117, 188);
-            this.remarksTextBox.Multiline = true;
-            this.remarksTextBox.Name = "remarksTextBox";
-            this.remarksTextBox.Size = new System.Drawing.Size(356, 32);
-            this.remarksTextBox.TabIndex = 1;
-           
-            // 
-            // addButton
-            // 
-            this.addButton.Location = new System.Drawing.Point(479, 191);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(65, 23);
-            this.addButton.TabIndex = 4;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Code";
             // 
             // showDataGridView
             // 
             this.showDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SL});
-            this.showDataGridView.Location = new System.Drawing.Point(113, 388);
+            this.showDataGridView.Location = new System.Drawing.Point(37, 388);
             this.showDataGridView.Name = "showDataGridView";
-            this.showDataGridView.Size = new System.Drawing.Size(600, 103);
+            this.showDataGridView.Size = new System.Drawing.Size(734, 103);
             this.showDataGridView.TabIndex = 6;
             // 
             // SL
@@ -512,14 +502,14 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(394, 520);
+            this.submitButton.Location = new System.Drawing.Point(346, 515);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.Size = new System.Drawing.Size(100, 34);
             this.submitButton.TabIndex = 7;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             // 
-            // Purchase
+            // PurchaseUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -529,7 +519,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Purchase";
+            this.Name = "PurchaseUI";
             this.Text = "Purchase";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -101,5 +101,12 @@ namespace Project
             productUI.Show();
             Hide();
         }
+
+        private void forwardButton_Click(object sender, EventArgs e)
+        {
+            SupplierUI supplierUI = new SupplierUI();
+            supplierUI.Show();
+            Hide();
+        }
     }
 }

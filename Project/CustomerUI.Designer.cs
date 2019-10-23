@@ -301,6 +301,7 @@
             this.forwardButton.Size = new System.Drawing.Size(40, 46);
             this.forwardButton.TabIndex = 7;
             this.forwardButton.UseVisualStyleBackColor = true;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // backButton
             // 

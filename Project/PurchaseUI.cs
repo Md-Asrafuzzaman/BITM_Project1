@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class SupplierUI : Form
+    public partial class PurchaseUI : Form
     {
-        public SupplierUI()
+        public PurchaseUI()
         {
             InitializeComponent();
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            PurchaseUI purchaseUI = new PurchaseUI();
-            purchaseUI.Show();
+            SalesUI salesUI = new SalesUI();
+            salesUI.Show();
+            Hide();
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            CatagoryUI catagoryUI = new CatagoryUI();
+            catagoryUI.Show();
             Hide();
         }
     }
