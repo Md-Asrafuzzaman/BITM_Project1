@@ -23,5 +23,14 @@ namespace Project.BLL
         {
             return _salesRepository.DisplayProduct();
         }
+
+        public List<Product> DisplayProductByCategoryID(string catagory)
+        {
+            return _salesRepository.DisplayProductByCategoryID(catagory);
+        }
+        public int DisplayCustomerLoylityPoint(string customerName)
+        {
+            return _salesRepository.DisplayCustomerLoylityPoint(customerName);
+        }
     }
 }

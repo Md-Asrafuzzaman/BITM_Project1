@@ -18,7 +18,7 @@ namespace Project.Repository
         {
             bool isAdded = false;
              // SQL connection 
-                string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
+                string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 //Sql Command
 
@@ -45,7 +45,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -73,7 +73,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -99,7 +99,7 @@ namespace Project.Repository
         public List<Catagory> Display()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)

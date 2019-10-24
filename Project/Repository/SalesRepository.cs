@@ -13,7 +13,7 @@ namespace Project.Repository
         public List<Catagory> DisplayCategory()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -41,7 +41,7 @@ namespace Project.Repository
         public List<Customer> DisplayCustomer()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -56,20 +56,67 @@ namespace Project.Repository
                 Customer customer = new Customer();
                 customer.Id = Convert.ToInt32(sqlDataReader["Customer_Id"]);
                 customer.Customer_Name = sqlDataReader["Customer_Name"].ToString();
+                customer.Customer_LoyalityPoint = Convert.ToInt32(sqlDataReader["Customer_Loyality"]);
                 customers.Add(customer);
             }
             sqlConnection.Close();
             return customers;
         }
 
+        public int DisplayCustomerLoylityPoint(string customerName)
+        {
+            //Connection
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            //Command 
+            //INSERT INTO Items (Name, Price) Values ('Black', 120)
+            string commandString = @"SELECT Customer_Loyality FROM Customer where Customer_Name ='" + customerName + "'";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+            //Open
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            Customer customer = new Customer();
+            while (sqlDataReader.Read())
+            {
+                //Customer customer = new Customer();
+                customer.Customer_LoyalityPoint = Convert.ToInt32(sqlDataReader["Customer_Loyality"]);
+                //int loyalityPoint = customer.Customer_LoyalityPoint;  
+            }
+            sqlConnection.Close();
+            return customer.Customer_LoyalityPoint;
+        }
         public List<Product> DisplayProduct()
         {
             //Connection
-            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
             string commandString = @"SELECT * FROM Product";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+            //Open
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            List<Product> products = new List<Product>();
+            while (sqlDataReader.Read())
+            {
+                Product product = new Product();
+                product.Product_Id = Convert.ToInt32(sqlDataReader["Product_Id"]);
+                product.Product_Name = sqlDataReader["Product_Name"].ToString();
+                products.Add(product);
+            }
+            sqlConnection.Close();
+            return products;
+
+        }
+        public List<Product> DisplayProductByCategoryID(string catagory)
+        {
+            //Connection
+            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            //Command 
+            //INSERT INTO Items (Name, Price) Values ('Black', 120)
+            string commandString = @"SELECT * FROM Product where Product_Category ='" + catagory + "'";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
             //Open
             sqlConnection.Open();
