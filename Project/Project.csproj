@@ -144,10 +144,15 @@
     <EmbeddedResource Include="SupplierUI.resx">
       <DependentUpon>SupplierUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Project.BLL.CatagoryManager.datasource" />
+    <None Include="Properties\DataSources\Project.BLL.CustomerManager.datasource" />
+    <None Include="Properties\DataSources\Project.BLL.ProductManager.datasource" />
+    <None Include="Properties\DataSources\Project.BLL.SalesManager.datasource" />
     <None Include="Properties\DataSources\Project.Model.Catagory.datasource" />
     <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
     <None Include="Properties\DataSources\Project.Model.Product.datasource" />
     <None Include="Properties\DataSources\Project.Model.Sales.datasource" />
+    <None Include="Properties\DataSources\Project.Model.Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

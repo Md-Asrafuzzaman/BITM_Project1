@@ -93,3 +93,7 @@ D:\BITM\BITM_Project1\Project\obj\Debug\Project.csproj.GenerateResource.cache
 D:\BITM\BITM_Project1\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 D:\BITM\BITM_Project1\Project\obj\Debug\Project.exe
 D:\BITM\BITM_Project1\Project\obj\Debug\Project.pdb
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.PurchaseReport.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.PurchaseUI.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.SalesReport.resources
+C:\Users\User\Desktop\Project\BITM_Project1\Project\obj\Debug\Project.SalesUI.resources

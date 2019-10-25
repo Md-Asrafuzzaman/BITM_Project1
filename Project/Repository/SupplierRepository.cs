@@ -16,11 +16,11 @@ namespace Project.Repository
         {
             bool isAdded = false;
             // SQL connection 
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Sql Command
 
-            string commandString = "INSERT INTO Customer(Supplier_Code,Supplier_Name,Customer_Address,Supplierr_Email,Supplier_Contact,Contact_Person) VALUES ('" + supplier.Supplier_Code + "','" + supplier.Supplier_Name + "','" + supplier.Supplier_Address + "','" + supplier.Supplier_Email + "','" + supplier.Supplier_Contact + "','" + supplier.Contact_Person + "')";
+            string commandString = "INSERT INTO Supplier(Supplier_Code,Supplier_Name,Supplier_Address,Supplier_Email,Supplier_Contact,Contact_Person) VALUES ('" + supplier.Supplier_Code + "','" + supplier.Supplier_Name + "','" + supplier.Supplier_Address + "','" + supplier.Supplier_Email + "','" + supplier.Supplier_Contact + "','" + supplier.Contact_Person + "')";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             sqlConnection.Open();
@@ -42,12 +42,12 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
-            string commandString = @"SELECT * FROM Supplier WHERE Customer_Name ='" + name.Supplier_Name + "'";
+            string commandString = @"SELECT * FROM Supplier WHERE Supplier_Name ='" + name.Supplier_Name + "'";
             SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             //Open
@@ -69,7 +69,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -96,7 +96,7 @@ namespace Project.Repository
         {
             bool exists = false;
             //Connection
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -122,7 +122,7 @@ namespace Project.Repository
         public List<Supplier> Display()
         {
             //Connection
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-VJNJ93K\; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
