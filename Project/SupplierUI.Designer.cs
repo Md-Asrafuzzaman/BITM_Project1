@@ -90,6 +90,7 @@
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(605, 135);
             this.showDataGridView.TabIndex = 8;
+            this.showDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showDataGridView_CellContentClick);
             // 
             // SL
             // 
@@ -104,6 +105,7 @@
             this.saveButton.TabIndex = 7;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // contactPersonTextBox
             // 
@@ -260,6 +262,7 @@
             this.homeButton.Size = new System.Drawing.Size(62, 48);
             this.homeButton.TabIndex = 2;
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // searchTextBox
             // 
@@ -288,6 +291,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "SupplierUI";
             this.Text = "SupplierUI";
+            this.Load += new System.EventHandler(this.SupplierUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).EndInit();

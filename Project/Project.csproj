@@ -50,6 +50,7 @@
     <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="BLL\ProductManager.cs" />
     <Compile Include="BLL\SalesManager.cs" />
+    <Compile Include="BLL\SupplierManager.cs" />
     <Compile Include="CatagoryUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,7 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Sales.cs" />
+    <Compile Include="Model\Supplier.cs" />
     <Compile Include="ProductUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +92,7 @@
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SalesRepository.cs" />
+    <Compile Include="Repository\SupplierRepository.cs" />
     <Compile Include="SalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
