@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 namespace Project.Model
 {
     public class Sales
-    {
-        public int SL { get; set; }
-        public int Id { get; set; }
-        public string Product { get; set; }
-        public int Quantity { get; set; }
-        public double MRP { get; set; }
-        public double Total_MRP { get; set; }
+    {  
+        public int Sales_Id { get; set; }
+        public string Customer_Name { get; set; }
+        public string Date { get; set; }
+        public int Customer_Loyality { get; set; }
+        public double GrandTotal { get; set; }
     }
 }

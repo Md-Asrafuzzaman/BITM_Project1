@@ -55,12 +55,12 @@ namespace Project
             }
             if (_customerManager.AddCustomerInfo(customer))
             {
-                MessageBox.Show("Category Save");
+                MessageBox.Show("Customer Save");
                 showDataGridView.DataSource = _customerManager.Display();
             }
             else
             {
-                MessageBox.Show("Category Not Save");
+                MessageBox.Show("Customer Not Save");
             }
 
         }

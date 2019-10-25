@@ -66,19 +66,19 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mRPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMRPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalMRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.grandTotalTextBox = new System.Windows.Forms.TextBox();
             this.payebleAmountTextBox = new System.Windows.Forms.TextBox();
             this.discountAmountTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
@@ -241,7 +241,6 @@
             this.loyalityPointTextBox.Name = "loyalityPointTextBox";
             this.loyalityPointTextBox.Size = new System.Drawing.Size(193, 26);
             this.loyalityPointTextBox.TabIndex = 1;
-            
             // 
             // label1
             // 
@@ -287,6 +286,7 @@
             this.addButton.TabIndex = 4;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // productsComboBox
             // 
@@ -296,6 +296,7 @@
             this.productsComboBox.Name = "productsComboBox";
             this.productsComboBox.Size = new System.Drawing.Size(193, 28);
             this.productsComboBox.TabIndex = 2;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -418,7 +419,6 @@
             this.discountTextBox.Name = "discountTextBox";
             this.discountTextBox.Size = new System.Drawing.Size(193, 26);
             this.discountTextBox.TabIndex = 1;
-            
             // 
             // label10
             // 
@@ -460,19 +460,18 @@
             this.submitButton.TabIndex = 4;
             this.submitButton.Text = "submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sLDataGridViewTextBoxColumn,
-            this.productDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.mRPDataGridViewTextBoxColumn,
-            this.totalMRPDataGridViewTextBoxColumn,
+            this.SL,
+            this.Product,
+            this.Quantity,
+            this.MRP,
+            this.TotalMRP,
             this.Edit});
-            this.dataGridView1.DataSource = this.salesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 29);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
@@ -480,40 +479,30 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // sLDataGridViewTextBoxColumn
+            // SL
             // 
-            this.sLDataGridViewTextBoxColumn.DataPropertyName = "SL";
-            this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
-            this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
-            this.sLDataGridViewTextBoxColumn.Width = 30;
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
             // 
-            // productDataGridViewTextBoxColumn
+            // Product
             // 
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
-            this.productDataGridViewTextBoxColumn.Width = 85;
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
             // 
-            // quantityDataGridViewTextBoxColumn
+            // Quantity
             // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.Width = 60;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
             // 
-            // mRPDataGridViewTextBoxColumn
+            // MRP
             // 
-            this.mRPDataGridViewTextBoxColumn.DataPropertyName = "MRP";
-            this.mRPDataGridViewTextBoxColumn.HeaderText = "MRP";
-            this.mRPDataGridViewTextBoxColumn.Name = "mRPDataGridViewTextBoxColumn";
-            this.mRPDataGridViewTextBoxColumn.Width = 60;
+            this.MRP.HeaderText = "MRP";
+            this.MRP.Name = "MRP";
             // 
-            // totalMRPDataGridViewTextBoxColumn
+            // TotalMRP
             // 
-            this.totalMRPDataGridViewTextBoxColumn.DataPropertyName = "Total_MRP";
-            this.totalMRPDataGridViewTextBoxColumn.HeaderText = "Total_MRP";
-            this.totalMRPDataGridViewTextBoxColumn.Name = "totalMRPDataGridViewTextBoxColumn";
-            this.totalMRPDataGridViewTextBoxColumn.Width = 75;
+            this.TotalMRP.HeaderText = "Total MRP";
+            this.TotalMRP.Name = "TotalMRP";
             // 
             // Edit
             // 
@@ -525,10 +514,6 @@
             this.Edit.Text = "Edit";
             this.Edit.UseColumnTextForButtonValue = true;
             this.Edit.Width = 80;
-            // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(Project.Model.Sales);
             // 
             // label9
             // 
@@ -583,6 +568,10 @@
             this.label6.Size = new System.Drawing.Size(122, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Grand Total(TK)";
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(Project.Model.Sales);
             // 
             // SalesUI
             // 
@@ -658,12 +647,12 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource catagoryBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mRPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalMRPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.TextBox loyalityPointTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MRP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalMRP;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
     }
 }

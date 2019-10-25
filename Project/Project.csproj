@@ -66,6 +66,7 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Sales.cs" />
+    <Compile Include="Model\SalesItems.cs" />
     <Compile Include="ProductUI.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -10,6 +10,61 @@ namespace Project.Repository
 {
     public class SalesRepository
     {
+        //Add Operation Method
+        public int AddSales(Sales sales)
+        {
+            int isAdded = 0;
+            // SQL connection 
+            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            //Sql Command
+
+            string commandString = "INSERT INTO Sales(Customer_Name,Date,Customer_Loyality,GrandTotal) VALUES ('" + sales.Customer_Name + "','" + sales.Date + "','" + sales.Customer_Loyality + "','" + sales.GrandTotal + "');SELECT SCOPE_IDENTITY()";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+
+            sqlConnection.Open();
+            int isExecute = sqlCommand.ExecuteNonQuery();
+            if (isExecute > 0)
+            {
+                isAdded = Convert.ToInt32(sqlCommand.ExecuteScalar());
+            }
+            else
+            {
+                //MessageBox.Show("Insertion Failed");
+            }
+
+            sqlConnection.Close();
+
+            return isAdded;
+        }
+
+        //Add Operation Method
+        public bool AddSalesItem(SalesItems salesItems)
+        {
+            bool isAdded = false;
+            // SQL connection 
+            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            //Sql Command
+
+            string commandString = "INSERT INTO SalesItems(Sales_Id,Product,Quantity,MRP,TotalMrp) VALUES ('" + salesItems.Sales_Id + "','" + salesItems.Product + "','" + salesItems.Quantity + "','" + salesItems.MRP+ "','" + salesItems.Total_MRP + "');SELECT SCOPE_IDENTITY()";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+
+            sqlConnection.Open();
+            int isExecute = sqlCommand.ExecuteNonQuery();
+            if (isExecute > 0)
+            {
+                isAdded = true;
+            }
+            else
+            {
+                //MessageBox.Show("Insertion Failed");
+            }
+
+            sqlConnection.Close();
+
+            return isAdded;
+        }
         public List<Catagory> DisplayCategory()
         {
             //Connection

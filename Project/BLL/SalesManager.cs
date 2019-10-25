@@ -32,5 +32,14 @@ namespace Project.BLL
         {
             return _salesRepository.DisplayCustomerLoylityPoint(customerName);
         }
+        public int AddSales(Sales sales)
+        {
+            return _salesRepository.AddSales(sales);
+        }
+
+        public bool AddSalesItem(SalesItems salesItems)
+        {
+            return _salesRepository.AddSalesItem(salesItems);
+        }
     }
 }

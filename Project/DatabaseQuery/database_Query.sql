@@ -28,3 +28,22 @@ CREATE TABLE Customer
 	Customer_Contact INT,
 	Customer_Loyality VARCHAR(30)
 )
+
+CREATE TABLE Sales
+(
+	Sales_Id INT IDENTITY(1,1) PRIMARY KEY,
+	Customer_Name VARCHAR(30),
+	Date VARCHAR(30),
+	Customer_Loyality INT,
+	GrandTotal FLOAT	
+)
+
+CREATE TABLE SalesItems
+(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Sales_Id INT FOREIGN KEY REFERENCES Sales(Sales_Id),
+	Product VARCHAR(30),
+	Quantity INT,
+	MRP FLOAT,
+	TotalMrp FLOAT	
+)
