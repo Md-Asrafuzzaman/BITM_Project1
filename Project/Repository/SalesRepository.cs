@@ -15,7 +15,7 @@ namespace Project.Repository
         {
             int isAdded = 0;
             // SQL connection 
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Sql Command
 
@@ -43,7 +43,7 @@ namespace Project.Repository
         {
             bool isAdded = false;
             // SQL connection 
-            string connectionString = @"Server=localhost; DataBase=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; DataBase=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Sql Command
 
@@ -68,7 +68,7 @@ namespace Project.Repository
         public List<Catagory> DisplayCategory()
         {
             //Connection
-            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -96,7 +96,7 @@ namespace Project.Repository
         public List<Customer> DisplayCustomer()
         {
             //Connection
-            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -121,7 +121,7 @@ namespace Project.Repository
         public int DisplayCustomerLoylityPoint(string customerName)
         {
             //Connection
-            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -143,7 +143,7 @@ namespace Project.Repository
         public List<Product> DisplayProduct()
         {
             //Connection
-            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)
@@ -167,7 +167,7 @@ namespace Project.Repository
         public List<Product> DisplayProductByCategoryID(string catagory)
         {
             //Connection
-            string connectionString = @"Server=localhost; Database=ProjectDB; Integrated Security=True";
+            string connectionString = @"Server=DESKTOP-FJFQ4S2\SQLSERVER; Database=ProjectDB; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             //Command 
             //INSERT INTO Items (Name, Price) Values ('Black', 120)

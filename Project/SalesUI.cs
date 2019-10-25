@@ -118,8 +118,6 @@ namespace Project
             discountAmountTextBox.Text = ((grandTotal * discount) / 100).ToString();
             payebleAmountTextBox.Text = (grandTotal - Convert.ToDouble(discountAmountTextBox.Text)).ToString();
             this.dataGridView1.Rows.Add(i,product, quantity, mRP, total_MRP);
-            
-
             //this.dataGridView1.Rows.Insert( 1, "two", "three", "four");
 
         }
@@ -135,8 +133,7 @@ namespace Project
             MessageBox.Show("Sales Confirm");
             SalesItems salesItems = new SalesItems();
             foreach (DataGridViewRow dr in dataGridView1.Rows)
-            {
-                
+            {               
                 salesItems.Sales_Id = getID;
                 salesItems.Product = Convert.ToString(dr.Cells[1].Value);
                 salesItems.Quantity = Convert.ToInt32(dr.Cells[2].Value);

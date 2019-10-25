@@ -95,3 +95,5 @@ D:\BITM\BITM_Project1\Project\obj\Debug\Project.exe
 D:\BITM\BITM_Project1\Project\obj\Debug\Project.pdb
 D:\BITM\BITM_Project1\Project\obj\Debug\Project.PurchaseReport.resources
 D:\BITM\BITM_Project1\Project\obj\Debug\Project.SalesReport.resources
+F:\BITM_Project\Project\obj\Debug\Project.PurchaseReport.resources
+F:\BITM_Project\Project\obj\Debug\Project.SalesReport.resources
