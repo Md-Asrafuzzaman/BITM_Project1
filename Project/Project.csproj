@@ -50,33 +50,6 @@
     <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="BLL\ProductManager.cs" />
     <Compile Include="BLL\SalesManager.cs" />
-<<<<<<< HEAD
-    <Compile Include="BLL\SalesReportManager.cs" />
-=======
-    <Compile Include="BLL\SupplierManager.cs" />
->>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
-    <Compile Include="CatagoryUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CatagoryUI.Designer.cs">
-      <DependentUpon>CatagoryUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerUI.Designer.cs">
-      <DependentUpon>CustomerUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Catagory.cs" />
-    <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\Product.cs" />
-    <Compile Include="Model\Sales.cs" />
-<<<<<<< HEAD
-    <Compile Include="Model\SalesItems.cs" />
-    <Compile Include="Model\SalesReport.cs" />
-=======
-    <Compile Include="Model\Supplier.cs" />
->>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
     <Compile Include="ProductUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,14 +75,7 @@
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SalesReportRepository.cs" />
     <Compile Include="Repository\SalesRepository.cs" />
-<<<<<<< HEAD
-    <Compile Include="SalesReportUI.cs">
-=======
-    <Compile Include="Repository\SupplierRepository.cs" />
-    <Compile Include="SalesReport.cs">
->>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
       <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SalesReportUI.Designer.cs">
       <DependentUpon>SalesReportUI.cs</DependentUpon>
     </Compile>
