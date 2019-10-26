@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class SalesReport
+    partial class SalesReportUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesReport));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesReportUI));
             this.showDataGridView = new System.Windows.Forms.DataGridView();
             this.searchButton = new System.Windows.Forms.Button();
             this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -47,57 +47,52 @@
             // showDataGridView
             // 
             this.showDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.showDataGridView.Location = new System.Drawing.Point(124, 263);
-            this.showDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.showDataGridView.Location = new System.Drawing.Point(83, 171);
             this.showDataGridView.Name = "showDataGridView";
-            this.showDataGridView.Size = new System.Drawing.Size(956, 231);
+            this.showDataGridView.Size = new System.Drawing.Size(637, 150);
             this.showDataGridView.TabIndex = 17;
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(954, 197);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchButton.Location = new System.Drawing.Point(636, 128);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(112, 35);
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 16;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // startDateTimePicker
             // 
             this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startDateTimePicker.Location = new System.Drawing.Point(212, 197);
-            this.startDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startDateTimePicker.Location = new System.Drawing.Point(141, 128);
             this.startDateTimePicker.Name = "startDateTimePicker";
-            this.startDateTimePicker.Size = new System.Drawing.Size(298, 26);
+            this.startDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.startDateTimePicker.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 202);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(80, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Start Date";
             // 
             // endDateTimePicker
             // 
             this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endDateTimePicker.Location = new System.Drawing.Point(645, 202);
-            this.endDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.endDateTimePicker.Location = new System.Drawing.Point(430, 131);
             this.endDateTimePicker.Name = "endDateTimePicker";
-            this.endDateTimePicker.Size = new System.Drawing.Size(298, 26);
+            this.endDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.endDateTimePicker.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(558, 205);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(372, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "End Date";
             // 
@@ -108,20 +103,20 @@
             this.panel2.Controls.Add(this.backButton);
             this.panel2.Controls.Add(this.logoutButton);
             this.panel2.Controls.Add(this.homeButton);
-            this.panel2.Location = new System.Drawing.Point(124, 52);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Location = new System.Drawing.Point(83, 34);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(956, 98);
+            this.panel2.Size = new System.Drawing.Size(637, 64);
             this.panel2.TabIndex = 11;
             // 
             // forwardButton
             // 
             this.forwardButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("forwardButton.BackgroundImage")));
             this.forwardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.forwardButton.Location = new System.Drawing.Point(285, 15);
-            this.forwardButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.forwardButton.Location = new System.Drawing.Point(190, 10);
+            this.forwardButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(60, 71);
+            this.forwardButton.Size = new System.Drawing.Size(40, 46);
             this.forwardButton.TabIndex = 7;
             this.forwardButton.UseVisualStyleBackColor = true;
             // 
@@ -129,10 +124,10 @@
             // 
             this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backButton.Location = new System.Drawing.Point(198, 15);
-            this.backButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.backButton.Location = new System.Drawing.Point(132, 10);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(76, 71);
+            this.backButton.Size = new System.Drawing.Size(51, 46);
             this.backButton.TabIndex = 4;
             this.backButton.UseVisualStyleBackColor = true;
             // 
@@ -140,10 +135,10 @@
             // 
             this.logoutButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoutButton.BackgroundImage")));
             this.logoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logoutButton.Location = new System.Drawing.Point(108, 14);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.logoutButton.Location = new System.Drawing.Point(72, 9);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(78, 71);
+            this.logoutButton.Size = new System.Drawing.Size(52, 46);
             this.logoutButton.TabIndex = 3;
             this.logoutButton.UseVisualStyleBackColor = true;
             // 
@@ -151,18 +146,18 @@
             // 
             this.homeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homeButton.BackgroundImage")));
             this.homeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homeButton.Location = new System.Drawing.Point(6, 11);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.homeButton.Location = new System.Drawing.Point(4, 7);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(93, 74);
+            this.homeButton.Size = new System.Drawing.Size(62, 48);
             this.homeButton.TabIndex = 2;
             this.homeButton.UseVisualStyleBackColor = true;
             // 
             // SalesReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.showDataGridView);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.startDateTimePicker);
@@ -170,7 +165,6 @@
             this.Controls.Add(this.endDateTimePicker);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SalesReport";
             this.Text = "SalesReport";
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).EndInit();

@@ -50,6 +50,7 @@
     <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="BLL\ProductManager.cs" />
     <Compile Include="BLL\SalesManager.cs" />
+    <Compile Include="BLL\SalesReportManager.cs" />
     <Compile Include="CatagoryUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +68,7 @@
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Sales.cs" />
     <Compile Include="Model\SalesItems.cs" />
+    <Compile Include="Model\SalesReport.cs" />
     <Compile Include="ProductUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +92,13 @@
     <Compile Include="Repository\CatagoryRepository.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\SalesReportRepository.cs" />
     <Compile Include="Repository\SalesRepository.cs" />
-    <Compile Include="SalesReport.cs">
+    <Compile Include="SalesReportUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesReport.Designer.cs">
-      <DependentUpon>SalesReport.cs</DependentUpon>
+    <Compile Include="SalesReportUI.Designer.cs">
+      <DependentUpon>SalesReportUI.cs</DependentUpon>
     </Compile>
     <Compile Include="SalesUI.cs">
       <SubType>Form</SubType>
@@ -133,8 +136,8 @@
     <EmbeddedResource Include="PurchaseUI.resx">
       <DependentUpon>PurchaseUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalesReport.resx">
-      <DependentUpon>SalesReport.cs</DependentUpon>
+    <EmbeddedResource Include="SalesReportUI.resx">
+      <DependentUpon>SalesReportUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesUI.resx">
       <DependentUpon>SalesUI.cs</DependentUpon>
