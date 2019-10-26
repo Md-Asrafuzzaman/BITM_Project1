@@ -1,0 +1,9 @@
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\obj\Debug\Module1.ProductCategoryUi.resources
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\obj\Debug\Module1.Properties.Resources.resources
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\obj\Debug\Module1.csproj.GenerateResource.Cache
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\bin\Debug\Module1.exe.config
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\bin\Debug\Module1.exe
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\bin\Debug\Module1.pdb
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\obj\Debug\Module1.exe
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\obj\Debug\Module1.pdb
+C:\Users\prantoshon\Documents\Bitm\Assigment\Day2\Bitm_Assignment2\Module1\Module1\obj\Debug\Module1.csprojResolveAssemblyReference.cache
