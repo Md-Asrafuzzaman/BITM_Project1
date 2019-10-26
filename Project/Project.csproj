@@ -50,7 +50,11 @@
     <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="BLL\ProductManager.cs" />
     <Compile Include="BLL\SalesManager.cs" />
+<<<<<<< HEAD
     <Compile Include="BLL\SalesReportManager.cs" />
+=======
+    <Compile Include="BLL\SupplierManager.cs" />
+>>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
     <Compile Include="CatagoryUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +71,12 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Sales.cs" />
+<<<<<<< HEAD
     <Compile Include="Model\SalesItems.cs" />
     <Compile Include="Model\SalesReport.cs" />
+=======
+    <Compile Include="Model\Supplier.cs" />
+>>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
     <Compile Include="ProductUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,7 +102,12 @@
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SalesReportRepository.cs" />
     <Compile Include="Repository\SalesRepository.cs" />
+<<<<<<< HEAD
     <Compile Include="SalesReportUI.cs">
+=======
+    <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="SalesReport.cs">
+>>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SalesReportUI.Designer.cs">
@@ -145,10 +158,15 @@
     <EmbeddedResource Include="SupplierUI.resx">
       <DependentUpon>SupplierUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Project.BLL.CatagoryManager.datasource" />
+    <None Include="Properties\DataSources\Project.BLL.CustomerManager.datasource" />
+    <None Include="Properties\DataSources\Project.BLL.ProductManager.datasource" />
+    <None Include="Properties\DataSources\Project.BLL.SalesManager.datasource" />
     <None Include="Properties\DataSources\Project.Model.Catagory.datasource" />
     <None Include="Properties\DataSources\Project.Model.Customer.datasource" />
     <None Include="Properties\DataSources\Project.Model.Product.datasource" />
     <None Include="Properties\DataSources\Project.Model.Sales.datasource" />
+    <None Include="Properties\DataSources\Project.Model.Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

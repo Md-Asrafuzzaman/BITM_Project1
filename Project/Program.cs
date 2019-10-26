@@ -16,7 +16,11 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new SalesReportUI());
+=======
+            Application.Run(new SupplierUI());
+>>>>>>> 757dcfb23987969b1117aadaf16f2be62f8fac36
         }
     }
 }
